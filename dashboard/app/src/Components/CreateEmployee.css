@@ -1,0 +1,50 @@
+.create-employee-form {
+  background: #e0f7fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  margin: 80px auto;
+}
+
+.create-employee-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.create-employee-form label {
+  font-weight: bold;
+}
+
+.create-employee-form input[type="text"],
+.create-employee-form input[type="email"],
+.create-employee-form input[type="file"],
+.create-employee-form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.create-employee-form input[type="radio"],
+.create-employee-form input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.create-employee-form button {
+  background: #46525e;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: calc(100% - 20px);
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.create-employee-form button:hover {
+  background: #529ceb;
+}

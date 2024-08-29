@@ -1,0 +1,23 @@
+.admin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 300px;
+}
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 5px;
+  padding: 8px;
+  background: rgb(93, 145, 190);
+}
+button {
+  display: flex;
+  flex-direction: row;
+
+  margin-top: 8px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 10px;
+}
