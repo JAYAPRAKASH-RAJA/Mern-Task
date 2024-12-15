@@ -14,7 +14,8 @@ const port=process.env.PORT || 3000;
 
 // Middlewares allow request from specific origins
 app.use(cors({
-  origin: 'http://localhost:5173',
+  // origin: 'http://localhost:5173',
+  origin: 'https://mern-task-dashboard.onrender.com',
   credentials: true
 }));
 
