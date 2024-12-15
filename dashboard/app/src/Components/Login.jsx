@@ -18,8 +18,8 @@ const Login = () => {
         try {
             const { name, email, password } = data;
             const endpoint = currentState === "Signin"
-                ? 'http://localhost:3000/api/auth/signin'
-                : 'http://localhost:3000/api/auth/signup';
+                ? 'https://mern-task-backend-f86t.onrender.com/api/auth/signin'
+                : 'https://mern-task-backend-f86t.onrender.com/api/auth/signup';
 
             console.log(`Sending request to ${endpoint} with data:`, { name, email, password });
 

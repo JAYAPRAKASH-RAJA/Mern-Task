@@ -15,7 +15,7 @@ const EmployeeList = () => {
     useEffect(() => {
         const fetchEmployees = async () => {
             try {
-                const response = await axios.get('http://localhost:3000/api/employees', {
+                const response = await axios.get('https://mern-task-backend-f86t.onrender.com/api/employees', {
                     headers: {
                         'Authorization': `Bearer ${localStorage.getItem('token')}`
                     }
@@ -49,7 +49,7 @@ const EmployeeList = () => {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:3000/api/employees/${id}`);
+            await axios.delete(`https://mern-task-backend-f86t.onrender.com/api/employees/${id}`);
             setEmployees(employees.filter(employee => employee._id !== id));
         } catch (err) {
             console.error('Error deleting employee:', err);
@@ -60,7 +60,7 @@ const EmployeeList = () => {
         try {
             const employee = employees.find(emp => emp._id === id);
             const updatedEmployee = { ...employee, active: !employee.active };
-            await axios.put(`http://localhost:3000/api/employees/${id}`, updatedEmployee);
+            await axios.put(`https://mern-task-backend-f86t.onrender.com/api/employees/${id}`, updatedEmployee);
             setEmployees(employees.map(emp => emp._id === id ? updatedEmployee : emp));
         } catch (err) {
             console.error('Error toggling active status:', err);
@@ -122,7 +122,7 @@ const EmployeeList = () => {
                                 <td>{employee.gender}</td>
                                 <td>{employee.designation}</td>
                                 <td>{Array.isArray(employee.course) ? employee.course.join(", ") : employee.course}</td>
-                                <td><img src={`http://localhost:3000/${employee.image}`} alt={employee.name} width="50" /></td>
+                                <td><img src={`https://mern-task-backend-f86t.onrender.com/${employee.image}`} alt={employee.name} width="50" /></td>
                                 <td>
                                     {formattedDate && !isNaN(formattedDate)
                                         ? formattedDate.toLocaleDateString()

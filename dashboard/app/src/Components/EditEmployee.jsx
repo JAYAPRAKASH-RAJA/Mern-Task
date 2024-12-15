@@ -20,7 +20,7 @@ const EditEmployee = ({ handleLogout }) => {
     useEffect(() => {
         const fetchEmployee = async () => {
             try {
-                const response = await axios.get(`http://localhost:3000/api/employees/${id}`);
+                const response = await axios.get(`https://mern-task-backend-f86t.onrender.com/api/employees/${id}`);
                 const fetchedData = response.data;
                 setData({
                     ...fetchedData,
@@ -67,7 +67,7 @@ const EditEmployee = ({ handleLogout }) => {
         }
 
         try {
-            await axios.put(`http://localhost:3000/api/employees/${id}`, formData, {
+            await axios.put(`https://mern-task-backend-f86t.onrender.com/api/employees/${id}`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
