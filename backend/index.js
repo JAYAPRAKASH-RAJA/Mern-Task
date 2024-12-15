@@ -9,6 +9,7 @@ import employeeRoutes from './src/routes/employee.js'
 
 dotenv.config();
 const app = express();
+const port=process.env.PORT || 3000;
 
 
 // Middlewares allow request from specific origins
@@ -57,7 +58,7 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
   connect();
   console.log('Server is running on port 3000');
 });
